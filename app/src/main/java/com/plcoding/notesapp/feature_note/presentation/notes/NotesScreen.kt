@@ -14,6 +14,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.FloatingActionButton
@@ -49,11 +50,12 @@ fun NotesScreen(
     val scope = rememberCoroutineScope()
 
     Scaffold(
-        floatingActionButton = {
+        floatingActionButton =  {
             FloatingActionButton(
                 onClick = {
-                    navController.navigate(Screen.AddEditNoteScreen.route)
+                    navController.navigate(Screen.AddEditNoteScreen.route)  // This code helps in navigating between different screens
                 },
+
                 backgroundColor = MaterialTheme.colors.primary
             ) {
                 Icon(imageVector = Icons.Default.Add, contentDescription = "Add note")
@@ -61,26 +63,26 @@ fun NotesScreen(
         },
         scaffoldState = scaffoldState
     ) { padding ->
-        Column(
-            modifier = Modifier
-                .fillMaxSize()
+        Column(  // Screen Ratio adjusted here
+            modifier = Modifier  //
+                .fillMaxSize( )
                 .padding(padding)
                 .padding(16.dp)
         ) {
             Row(
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth(),  //This one adjusts the 3 lines beside My Notes
                 horizontalArrangement = Arrangement.SpaceBetween,
                 verticalAlignment = Alignment.CenterVertically
             ) {
                 Text(
-                    text = "Your note",
+                    text = "My Notes",
                     style = MaterialTheme.typography.h4
                 )
                 IconButton(
                     onClick = {
                         viewModel.onEvent(NotesEvent.ToggleOrderSection)
                     },
-                ) {
+                ) {  // Sorting Button instructions
                     Icon(
                         imageVector = Icons.Default.Sort,
                         contentDescription = "Sort"

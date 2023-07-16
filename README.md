@@ -2,7 +2,7 @@
 
 ## Project Description
 
-NotesApp is a simple Android app that helps you save your daily notes. The app is made of CleanArchitecture, CRUD, and JetPack Compose. It uses RoomDB to store and retrieve tasks.
+The NotesApp is a straightforward Android application designed to assist users in saving their daily notes. It follows the principles of Clean Architecture and implements CRUD (Create, Read, Update, Delete) operations using Jetpack Compose, Kotlin, Animations, Coroutines, and RoomDB for data persistence. The app leverages the capabilities of the Android SDK to provide a smooth and intuitive user experience.
 
 ## Screenshots
 

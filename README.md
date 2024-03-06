@@ -1,4 +1,4 @@
-# NotesApp-JetpackCompose
+# Lekha-Jokha-JetpackCompose
 
 ## Project Description
 
